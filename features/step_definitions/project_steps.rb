@@ -23,3 +23,7 @@ Then /^I should be on the project page for "([^"]*)"$/ do |arg1|
   current_path.should == project_path(Project.find_by_name!(arg1))
   page.should have_content(arg1+" - Projects - Ticketee")
 end
+
+Given /^there is a project called "([^"]*)"$/ do |name|
+  FactoryGirl.create(:project, :name => name)
+end
