@@ -12,12 +12,13 @@ Feature: Creating projects
 		And I fill in "Project name:" with "TextMate 2"
 		And I press "Create Project"
 		Then I should see "Project has been created."
-    And I should be on the project page for "TextMate 2"
+    	And I should be on the project page for "TextMate 2"
     
-  Scenario: Creating a project without a name
-    And I press "Create Project"
-    Then I should see "Project has not been created"
-    And I should see "Name can't be blank"
+	 
+	 Scenario: Creating a project without a name
+	    And I press "Create Project"
+	    Then I should see "Project has not been created"
+	    And I should see "Name can't be blank"
 
 
 		
