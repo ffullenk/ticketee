@@ -49,3 +49,6 @@ group :test do
 	gem 'factory_girl'
 	gem 'email_spec'
 end
+
+gem 'execjs'
+gem 'therubyracer'
