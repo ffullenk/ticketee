@@ -50,5 +50,7 @@ group :test do
 	gem 'email_spec'
 end
 
-gem 'execjs'
-gem 'therubyracer'
+# gem 'libv8'
+# gem 'execjs'
+# gem 'therubyracer'
+
