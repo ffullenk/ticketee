@@ -23,7 +23,7 @@ class TicketsController < ApplicationController
   def destroy
     
     @ticket.destroy
-    flash[:notice] = "Ticket has been deleted."
+    flash[:success] = "Ticket has been deleted."
     redirect_to @project
     
   end
@@ -31,10 +31,10 @@ class TicketsController < ApplicationController
   def update
     
     if @ticket.update_attributes(params[:ticket])
-      flash[:notice] = "Ticket has been updated."
+      flash[:success] = "Ticket has been updated."
       redirect_to [@project, @ticket]
     else
-      flash[:alert] = "Ticket has not been updated."
+      flash[:error] = "Ticket has not been updated."
       render :action => "edit"  
     end
   end
@@ -44,10 +44,10 @@ class TicketsController < ApplicationController
     @ticket = @project.tickets.build(params[:ticket].merge!(:user => current_user))
     
     if @ticket.save
-      flash[:notice] = "Ticket has been created."
+      flash[:success] = "Ticket has been created."
       redirect_to [@project,@ticket]
     else
-      flash[:alert] = "Ticket has not been created."
+      flash[:error] = "Ticket has not been created."
       render :action => "new"
     end
     
@@ -56,7 +56,7 @@ class TicketsController < ApplicationController
   def find_project
     @project = Project.find(params[:project_id])
     rescue ActiveRecord::RecordNotFound
-    flash[:alert] = "The project you were looking" +
+    flash[:error] = "The project you were looking" +
     " for could not be found."
     redirect_to projects_path
   end

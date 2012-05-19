@@ -14,6 +14,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'dynamic_form'
+  gem 'twitter-bootstrap-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
@@ -51,6 +52,6 @@ group :test do
 end
 
 # gem 'libv8'
-# gem 'execjs'
-# gem 'therubyracer'
+gem 'execjs'
+gem 'therubyracer'
 
