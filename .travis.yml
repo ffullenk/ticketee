@@ -4,8 +4,8 @@ rvm:
 env:
   - DB=sqlite
 script:
+  - rails g devise:install -f
   - bundle exec rake --trace db:migrate
   - bundle exec rake --trace db:test:prepare
 after_script:
-  - rails g devise:install
   - rake cucumber features
