@@ -2,3 +2,11 @@ language: ruby
 rvm:
   - 1.9.3
   
+task :travis do
+  ["rake db:migrate", "rake cucumber features"].each do |cmd|
+    puts "Comenzando a correr #{cmd}..."
+    system("export DISPLAY=:99.0 && bundle exec #{cmd}")
+    raise "#{cmd} fallo!" unless $?.exitstatus == 0
+  end
+end
+  
