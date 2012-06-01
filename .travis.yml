@@ -7,4 +7,5 @@ script:
   - bundle exec rake --trace db:migrate
   - bundle exec rake --trace db:test:prepare
 after_script:
+  - rails g devise:install
   - rake cucumber features
