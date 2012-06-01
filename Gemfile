@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'devise', '~> 1.4.3'
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -54,4 +54,8 @@ end
 # gem 'libv8'
 gem 'execjs'
 gem 'therubyracer'
+
+gem 'cancan'
+gem 'paperclip'
+
 

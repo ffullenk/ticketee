@@ -15,3 +15,7 @@ Given /^"([^\"]*)" has created a ticket for this project:$/ do |email, table|
     @project.tickets.create!(attributes)
   end
 end
+
+When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
+ attach_file(field, File.expand_path(path))
+end
