@@ -9,6 +9,8 @@ class TicketsController < ApplicationController
     #@ticket = Ticket.new(:project_id => @project.id)
     #ó
     @ticket = @project.tickets.build
+    3.times { @ticket.assets.build }
+
     
   end
   
