@@ -5,6 +5,7 @@ env:
   - DB=sqlite
 script:
   - rails g devise:install -f
+  - rails g devise user -f
   - bundle exec rake --trace db:migrate
   - bundle exec rake --trace db:test:prepare
 after_script:
