@@ -78,6 +78,7 @@ GEM
     factory_girl (3.3.0)
       activesupport (>= 3.0.0)
     ffi (1.0.11)
+    friendly_id (4.0.6)
     gherkin (2.10.0)
       json (>= 1.4.6)
     gherkin (2.10.0-x86-mingw32)
@@ -205,6 +206,7 @@ DEPENDENCIES
   email_spec
   execjs
   factory_girl
+  friendly_id (~> 4.0.1)
   jquery-rails
   paperclip
   rails

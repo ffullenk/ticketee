@@ -57,5 +57,6 @@ gem 'therubyracer'
 
 gem 'cancan'
 gem 'paperclip'
+gem "friendly_id", "~> 4.0.1"
 
 

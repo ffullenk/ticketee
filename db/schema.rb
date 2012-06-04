@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120601033901) do
+ActiveRecord::Schema.define(:version => 20120604005422) do
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -27,7 +27,10 @@ ActiveRecord::Schema.define(:version => 20120601033901) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug"
   end
+
+  add_index "projects", ["slug"], :name => "index_projects_on_slug"
 
   create_table "tickets", :force => true do |t|
     t.string   "title"
